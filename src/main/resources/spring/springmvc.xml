@@ -25,7 +25,12 @@
         <property name="maxUploadSize" value="20971520" /> <!-- 20MB -->
         <!-- max size of file in memory (in bytes) -->
         <property name="maxInMemorySize" value="1048576" /> <!-- 1MB -->
-
+    </bean>
+    
+     <!-- 启用shrio授权注解拦截方式 -->
+    <aop:config proxy-target-class="true"></aop:config>
+    <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+        <property name="securityManager" ref="securityManager"/>
     </bean>
 
 </beans>
