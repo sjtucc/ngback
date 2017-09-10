@@ -35,6 +35,16 @@
   <filter-name>encodingFilter</filter-name>
   <url-pattern>/*</url-pattern>
   </filter-mapping>
+
+	<!--解决跨域访问 -->
+	<filter>
+		<filter-name>crossorigin</filter-name>
+		<filter-class>cc.ngback.cors.CorsFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>crossorigin</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
   
    <!-- shiro 安全过滤器 -->
     <filter>
